@@ -5,8 +5,8 @@ import sys
 connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
 # connection = pika.BlockingConnection(pika.ConnectionParameters('10.14.16.190',5672,'/',pika.PlainCredentials('user', 'pass')))
 
-q = 'Q2'
-rk = 'T2'
+q = 'Q2'    
+RK = 'T2'
 
 channel = connection.channel()
 
@@ -14,7 +14,7 @@ channel.exchange_declare(exchange='direct_logs', exchange_type='direct')
 
 result2 = channel.queue_declare(queue=q, exclusive=False)
 
-channel.queue_bind(exchange='direct_logs', queue=q, routing_key=rk)
+channel.queue_bind(exchange='direct_logs', queue=q, routing_key=RK)
 
 print(' [*] Esperando por mensajes. Pulsar CTRL+C para cerrar.')
 

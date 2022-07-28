@@ -11,16 +11,13 @@ amqp.connect("amqp://localhost", function (error0, connection) {
     var exchange = "direct_logs";
     var args = process.argv.slice(2);
     var msg = args.join(" ") || "Hello World!";
+    var severity = "T2";
 
     channel.assertExchange(exchange, "direct", {
       durable: false,
     });
-
-    rk = ["T1", "T2"];
-    rk.forEach((element) => {
-      channel.publish(exchange, element, Buffer.from(msg));
-      console.log(" [x] Sent %s: '%s'", element, msg);
-    });
+    channel.publish(exchange, severity, Buffer.from(msg));
+    console.log(" [x] Sent %s: '%s'", severity, msg);
   });
 
   setTimeout(function () {
