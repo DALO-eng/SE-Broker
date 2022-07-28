@@ -3,7 +3,7 @@ import pika
 import sys
 
 #connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
-connection = pika.BlockingConnection(pika.ConnectionParameters('192.168.1.17',5672,'/',pika.PlainCredentials('user', 'pass')))
+connection = pika.BlockingConnection(pika.ConnectionParameters('172.17.0.1',5672,'/',pika.PlainCredentials('user', 'pass')))
 
 q = 'Q1'
 RK = 'T1'
