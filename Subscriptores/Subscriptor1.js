@@ -26,6 +26,7 @@ amqp.connect("amqp://localhost", function (error0, connection) {
         console.log(" [*] Waiting for logs. To exit press CTRL+C");
 
         channel.bindQueue(q.queue, exchange, "T1");
+        channel.bindQueue(q.queue, exchange, "T3");
 
         channel.consume(
           q.queue,

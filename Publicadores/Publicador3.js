@@ -11,7 +11,7 @@ amqp.connect("amqp://localhost", function (error0, connection) {
     var exchange = "direct_logs";
     var args = process.argv.slice(2);
     var msg = args.join(" ") || "Hello World!";
-    var severity = "T1";
+    var severity = "T3";
 
     channel.assertExchange(exchange, "direct", {
       durable: false,
