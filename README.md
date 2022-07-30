@@ -30,3 +30,25 @@ Para que los emitters de JS envien los mensajes de su respectiva cola, deberá e
 node emitter1.js Mi mensaje
 ```
 (Esto para el emitter correspondiente)
+
+### Python
+
+Se debe instalar el lenguaje [Python](https://www.python.org/downloads/)
+Se debe instalar el sistema de gestión de paquetes [pip](https://pypi.org/project/pip/)
+Finalmente se instala la librería [pika](https://pypi.org/project/pika/)
+
+#### Receivers
+
+Para que los receivers de Python muestren los mensajes de su respectiva cola, deberá ejecutar el siguiente comando:
+```
+python receiver1.py
+```
+(Esto para el receiver correspondiente)
+
+#### Emitters
+
+Para que los emitters de Python envien los mensajes de su respectiva cola, deberá ejecutar el siguiente comando:
+```
+python emitter1.py Mi mensaje
+```
+(Esto para el emitter correspondiente)
