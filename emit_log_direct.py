@@ -5,7 +5,7 @@ import sys
 # connection = pika.BlockingConnection(
 #     pika.ConnectionParameters(host='localhost'))
 credentials = pika.PlainCredentials('user', 'pass')
-parameters = pika.ConnectionParameters('192.168.1.17',5672,'/',credentials)
+parameters = pika.ConnectionParameters('192.168.20.35',5672,'/',credentials)
 connection = pika.BlockingConnection(parameters)
 channel = connection.channel()
 
